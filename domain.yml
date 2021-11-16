@@ -1,0 +1,67 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - movie_search
+  - movie_ramble
+  - bot_challenge
+  - addition
+  - multiplication
+
+entities:
+  - num1
+  - num2
+
+slots:
+  num1:
+    type: float
+    min_value: -1000.0
+    max_value: 1000.0
+  num2:
+    type: float
+    min_value: -1000.0
+    max_value: 1000.0
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_not_help:
+  - text: "Get lost!"
+
+  utter_not_understand:
+  - text: "I do not understand. BEEP. BEEP."
+    image: "https://static.vecteezy.com/system/resources/previews/001/994/248/original/a-cute-robot-is-standing-tall-it-is-broken-and-smoking-error-404-for-internet-site-illustration-of-a-character-vector.jpg"
+
+  utter_plot:
+     - text: "Write the plot for the movie title you want to find."
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_movie_search
+  - action_addition
+  - action_multiplication
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

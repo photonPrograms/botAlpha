@@ -1,0 +1,114 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_not_help
+
+- story: movie ramble path helped
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: movie_ramble
+  - action: action_movie_search
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: movie ramble path not helped
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: movie_ramble
+  - action: action_movie_search
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_not_help
+
+- story: movie search ask helped
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: movie_search
+  - action: utter_plot
+  - intent: movie_ramble
+  - action: action_movie_search
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: movie search ask not helped
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: movie_search
+  - action: utter_plot
+  - intent: movie_ramble
+  - action: action_movie_search
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_not_help
+
+- story: addition helped
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: addition
+  - action: action_addition
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: addition not helped
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: addition
+  - action: action_addition
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_not_help
+
+- story: multiplication helped
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: multiplication
+  - action: action_multiplication
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: multiplication not helped
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: multiplication
+  - action: action_multiplication
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_not_help

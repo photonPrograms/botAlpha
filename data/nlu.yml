@@ -1,0 +1,140 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: movie_ramble
+  examples: |
+      - the monster Insectosaurus destroys villages eating everyone alive Gogeta and his party tries to subdue the monster in epic fight
+      - assassin infiltrates the secret trafficking organization one goal in mind to kill the dark boss
+      - Marriage of Anakin to Padme. Palpatine weaves plans to overthrow the Jedi council and become chancellor. Anakin falls to the dark side
+      - toys are sentient. Woody and Buzz go on an adventure starting with a pizza joint. Run from the kid who breaks his toys.
+      - panda chosen as the next dragon warrior. Po too lazy to train. Shifu trains Po with food baits. Poo and furious five pitted against the leopard warrior.
+      - servants and masters. holy grail wish fulfill. Saber and shiro emiya.
+
+- intent: movie_search
+  examples: |
+      - find me a movie.
+      - help me search a movie.
+      - find a movie like
+      - i need a movie
+      - could you find me a movie?
+      - could you help me find a movie?
+      - can you help me find a movie?
+      - can you find a movie for me?
+      - find a movie for me.
+
+- intent: addition
+  examples: |
+      - [2](num1) + [31.5](num2)
+      - [-56.6](num1) + [9](num2)
+      - [98](num1) + [-121](num2)
+      - add [45.3](num1) [145.21](num2)
+      - plus [67](num1) [751.11](num2)
+      - [-81.3](num1) plus [-8.4](num2)
+      - [43](num1) add [53](num2)
+      - sum [789.45](num1) [12](num2)
+      - [7.4444](num1) sum [-32.67](num2)
+
+- intent: multiplication
+  examples: |
+      - [2](num1) * [31.32](num2)
+      - [-56](num1) x [9.2](num2)
+      - [98.2](num1) * [-121](num2)
+      - [6](num1) x [0.88](num2)
+      - multiply [45.5](num1) [145](num2)
+      - mult [67.45](num1) [751.43](num2)
+      - mul [67.45](num1) [751.43](num2)
+      - [-81.5](num1) multiply [-8.2](num2)
+      - [43.1](num1) mult [53.6](num2)
+      - [43.1](num1) mul [53.6](num2)
+      - product [789.8](num1) [12.4](num2)
+      - [7](num1) product [-32.6](num2)
